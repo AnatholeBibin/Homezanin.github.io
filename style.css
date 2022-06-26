@@ -3,6 +3,47 @@
 html{
     scroll-behavior: smooth;
 }
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.container {
+  overflow: hidden;
+  display: flex;
+  /* Fonctionne avec toutes les tailles */
+  width:cover;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  /* pour rotate on enlève le translate et on rajoute le rotate */
+  /* transform:  rotate(90deg); */
+}
+.txt {
+  white-space: nowrap;
+  font-size: 20px;
+  animation: scrollTxt 7s linear infinite;
+}
+
+.t1 {
+   color: red; 
+}
+.t2 {
+  color: blue; 
+}
+@keyframes scrollTxt {
+  0%{
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: translate(0%, 0);
+  }
+}
+
 body{
     margin: 0px;
     padding: 0px;
@@ -41,7 +82,7 @@ header{
     background-size: cover;
     color:;
     font-weight: bold;
-    padding: 40px;
+    padding: 120px 10px;
 }
 header h1{
     font-family: 'Playfair Display', serif;
